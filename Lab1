@@ -1,0 +1,17 @@
+//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+//contract defines a smart contract
+//a solidity file can contain one or more contracts
+contract MyContract{
+
+    address owner; //state variable
+
+    constructor() {
+        owner = msg.sender; //msg.sender is a global variable that returns the address of the sender of the message
+    }
+
+    function getBalance() public view returns(uint){
+        return owner.balance;
+    }
+}
